@@ -2,13 +2,21 @@
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
+
+    --bg-clr: #0b0c10;
+    --bg-clr2: #1F2833; 
+    --bg-clr3: #C5C6C7; 
+    --bg-clr4: #66FCF1; 
+    --bg-clr5: #45A29E; 
 }
 
 body { 
     height: 100vh; 
-    background-color: rgb(136, 155, 172);
+    background-color: var(--bg-clr3);
     font-family: sans-serif;
+    overflow: hidden;
 }
+
 
 /*Header*/
 
@@ -23,7 +31,7 @@ body {
 .home-button:hover { 
     transform:scale(1.20); 
     transition: 0.2s ease-out;
-    color:chocolate;
+    color: var(--bg-clr4);
     cursor: pointer;
 }
 
@@ -32,7 +40,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: var(--bg-clr);
 }
 
 .header-menu { 
@@ -45,17 +53,98 @@ body {
     font-weight: 600;
 }
 
-.header-menu li a { 
+.nav-item { 
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: var(--bg-clr3);
 }
 
-.header-menu li:hover { 
+.header-menu li:hover,
+.mobile-menu li:hover { 
     transform: translateX(-5px);
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
 
-.header-menu li a:hover { 
-    color: chocolate;
+.header-menu li a:hover,
+.mobile-menu li a:hover  { 
+    color: var(--bg-clr4);
 }
+
+
+.mobile-menu-close { 
+    transform: translateY(-250px);
+}
+
+.mobiel-menu-open { 
+    transform: translateY(20px); 
+}
+
+.mobile-menu { 
+    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-clr);
+    width: 100%;
+    left: 0;
+    top: 5%;
+    list-style: none;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 30px;
+    padding: 20px;
+    transition: 0.4s ease-in-out;
+    z-index: 10;
+    max-width: 1500px;
+}
+
+.mobile-menu li { 
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.hamburger-button { 
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.hamburger-button:hover { 
+    cursor: pointer;
+}
+
+/* about-container */ 
+
+.about-circle { 
+    position: relative;
+    height: 600px;
+    background-color: var(--bg-clr5);
+    width: 100%;
+    clip-path: circle(50% at 25% 0);
+    z-index: 0;
+   
+}
+
+.about-circle h1 { 
+    font-size: 8rem;
+    margin: 50px;
+}
+
+.about-circle p {
+    margin: 50px;
+}
+
+.about-container { 
+    display: flex;
+
+}
+
+.about-picture { 
+    top: 10%;
+    right: 5%;
+    position: absolute;
+    max-width: 30%;
+    clip-path: circle(50% at 50% 50%);
+}
+

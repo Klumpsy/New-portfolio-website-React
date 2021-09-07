@@ -1,16 +1,42 @@
-import React from "react"
+import React, { useState } from "react"
+import NavItem from "./NavItem";
 
-const Header = () => { 
+
+const Header = ({width}) => { 
+
+    const [openMobile, setOpenMobile] = useState(false)
+
+   
     return (
         <div className="header-container">
             <a className="home-button" href="/">BK</a>
-            <div>
-                <ul className = "header-menu">
-                    <li><a href="">Over</a></li>
-                    <li><a href="">Projecten</a></li>
-                    <li><a href="">contact</a></li>
+            {width < 480 ? 
+            <nav className = "mobile-nav-container">
+                <button onClick={() => setOpenMobile(!openMobile)} 
+                className="hamburger-button"><i className={openMobile ? "fa fas fa-times fa-lg" : "fa fas fa-bars fa-lg"}></i></button>
+
+                {!openMobile ? 
+                <ul className = "mobile-menu mobile-menu-close">
+                    <NavItem text="Over"/>
+                    <NavItem text="Projecten"/>
+                    <NavItem text="Contact"/>
                 </ul>
-            </div>
+                :
+                <ul className = "mobile-menu mobile-menu-open">
+                <NavItem text="Over"/>
+                <NavItem text="Projecten"/>
+                <NavItem text="Contact"/>
+                </ul>
+                }
+            </nav>
+            :
+            <nav>
+                <ul className = "header-menu">
+                    <NavItem text="Over"/>
+                    <NavItem text="Projecten"/>
+                    <NavItem text="Contact"/>
+                </ul>
+            </nav>}
         </div>
     )
 }
