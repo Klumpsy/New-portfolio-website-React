@@ -8,7 +8,7 @@ import react from "../images/React-01.png";
 import nodeJs from "../images/Node-JS-02.png"; 
 import mongoDb from "../images/Mongodb-02.png"; 
 import git from "../images/Git-06.png"; 
-import { FaArrowRight, FaArrowLeft} from "react-icons/fa";
+import { motion } from "framer-motion";
 
 
 const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git];
@@ -16,15 +16,33 @@ const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git];
 
 const Skills = () => { 
 
-   
+
     return (
-        <div className = 'skill-slider'>
+        <motion.div className = 'skill-slider'
+        animate = {{
+            y: 0,
+            staggerChilderen: 0.2
+        }}
+        initial = {{
+            y: 60
+        }}
+        transition = {{
+           type: "spring",
+        }}>
+               
             {images.map((image, index) => (
-                <div>
-                    <img className = "skill-img" src={image} index ={index}></img>
-                </div>
+                <motion.div
+                animate={{
+                    y: 0
+                }}
+                initial = {{
+                    y: 20
+                }}
+                >
+                    <img className = "skill-img" src={image} index ={index}/>
+                </motion.div>
             ))}
-        </div>
+        </motion.div>
     )
 }
 
