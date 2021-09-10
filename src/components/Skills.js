@@ -10,37 +10,55 @@ import mongoDb from "../images/Mongodb-02.png";
 import git from "../images/Git-06.png"; 
 import { motion } from "framer-motion";
 
-
 const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git];
 
 
 const Skills = () => { 
 
+    const boxVariant = { 
+        hidden: { 
+            y: 50
+        },
+        visible: { 
+            y: 0,
+            transition: { 
+                delay: 0.5,
+                when: "beforeChildren",
+                staggerChildren: 0.2
+            }
+        }
+    }
+
+    const skillVariant = { 
+        hidden: { 
+            y: 40,
+            opacity: 0
+        },
+        visible: { 
+            y: 0,
+            opacity: 1,
+            delay: 0.2
+        }
+    }
+
 
     return (
         <motion.div className = 'skill-slider'
-        animate = {{
-            y: 0,
-            staggerChilderen: 0.2
-        }}
-        initial = {{
-            y: 60
-        }}
-        transition = {{
-           type: "spring",
-        }}>
+        className = "skill-slider"
+        variants = {boxVariant}
+        animate = "visible"
+        initial = "hidden"
+        >
                
             {images.map((image, index) => (
-                <motion.div
-                animate={{
-                    y: 0
-                }}
-                initial = {{
-                    y: 20
-                }}
+            <motion.div className ="skill-item"
+            className = "skill-item"
+            variants = {skillVariant}
+            animate = "visible"
+            initial = "hidden"
                 >
-                    <img className = "skill-img" src={image} index ={index}/>
-                </motion.div>
+                <img className = "skill-img" src={image} index ={index}/>
+            </motion.div>
             ))}
         </motion.div>
     )

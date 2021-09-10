@@ -1,40 +1,53 @@
-import React, { useState } from 'react'; 
+import React, { useEffect } from 'react'; 
 import Skills from './Skills';
-import { motion } from "framer-motion"; 
+import { motion, useAnimation } from "framer-motion"; 
 import profilepicture from "../images/picture.jpg"
+import { useInView } from "react-intersection-observer";
+
 
 const About = () => { 
 
-    const [isAnimating, setIsAnimating] = useState(true);
+    const {ref, inView} = useInView();
+    const TextAnimation = useAnimation();
+    const ImageAnimation = useAnimation(); 
 
+    useEffect(() => { 
+        inView ?  
+            TextAnimation.start({
+                x:0,
+                transition: { 
+                    type: 'spring', duration: 1, bounce: 0.2
+                }
+            }) &&
+            ImageAnimation.start({
+                x:0,
+                rotate: 360,
+                opacity: 1,
+
+                transition: {
+                    type: "spring", stiffness: 70, damping: 5
+                }
+            }) 
+        : 
+            TextAnimation.start({
+                x: -40
+            }) &&
+            ImageAnimation.start({
+                x: -460, opacity: 0.1
+            })
+    },[inView])
+        
+    
     return (
         <div className = "about-container">
-             <div className = "about-info">
+             <div ref={ref} className = "about-info">
                  <motion.h1
-                 animate = {{
-                     x: 0
-                 }}
-                 initial = {{
-                     x: -40
-                 }}
+                 animate = {TextAnimation}
+                 
                  >Welkom</motion.h1>
             </div> 
-            <motion.img className = "about-picture" src={profilepicture}
-            animate= {{
-                x: 0,
-                rotate: 360,
-                opacity: 1
-            }}
-            initial = {{ 
-                x: -460,
-                opacity: 0.1
-            }}
-            transition = {{
-                type: "spring",
-                stiffness: 70,
-                damping: 5
-            }}
-            
+            <motion.img ref={ref} className = "about-picture" src={profilepicture}
+            animate= {ImageAnimation}
             />
             <Skills/>
         </div>
