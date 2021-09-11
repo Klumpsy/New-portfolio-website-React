@@ -20,12 +20,11 @@ const About = () => {
                 }
             }) &&
             ImageAnimation.start({
-                x:0,
-                rotate: 360,
+                x: 0,
                 opacity: 1,
 
                 transition: {
-                    type: "spring", stiffness: 70, damping: 5
+                    type: "spring", stiffness: 80, damping: 6
                 }
             }) 
         : 
@@ -33,11 +32,10 @@ const About = () => {
                 x: -40
             }) &&
             ImageAnimation.start({
-                x: -460, opacity: 0.1
+                x: -360, opacity: 0.1,
             })
     },[inView])
         
-    
     return (
         <div className = "about-container">
              <div ref={ref} className = "about-info">
