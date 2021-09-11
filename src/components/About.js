@@ -37,12 +37,12 @@ const About = () => {
     },[inView])
         
     return (
-        <div className = "about-container">
+        <div className = "about-container" id="home">
              <div ref={ref} className = "about-info">
                  <motion.h1
-                 animate = {TextAnimation}
-                 
-                 >Welkom</motion.h1>
+                 animate = {TextAnimation}>
+                 Welkom
+                 </motion.h1>
             </div> 
             <motion.img ref={ref} className = "about-picture" src={profilepicture}
             animate= {ImageAnimation}

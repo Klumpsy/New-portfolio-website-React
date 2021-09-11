@@ -1,10 +1,19 @@
 import React, { useState } from "react"
+import {Link, animateScroll} from 'react-scroll';
 
-const NavItem = ({text}) => { 
-
+const NavItem = ({text, pageId}) => { 
+ console.log(pageId)
     return ( 
         <>
-        <li><a href="" className ="nav-item">{text}</a></li>
+        <Link
+            className = "nav-link"
+            activeClass="active"
+            to={pageId}
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+        >{text}</Link>
         </>
     )
 }

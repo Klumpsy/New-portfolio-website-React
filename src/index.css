@@ -60,9 +60,10 @@ body {
     list-style: none;
 }
 
-.header-menu li { 
+.nav-link { 
     margin: 20px;
     font-weight: 600;
+    color: white;
 }
 
 .nav-item { 
@@ -70,21 +71,21 @@ body {
     color: var(--bg-clr3);
 }
 
-.header-menu li:hover,
-.mobile-menu li:hover { 
+.header-menu .nav-link:hover,
+.mobile-menu .nav-link:hover { 
     transform: translateX(-5px);
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
 
-.header-menu li a:hover,
-.mobile-menu li a:hover  { 
+.header-menu .nav-link:hover,
+.mobile-menu .nav-link:hover  { 
     color: var(--bg-clr4);
 }
 
 
 .mobile-menu-close { 
-    transform: translateY(-250px);
+    transform: translateY(-300px);
 }
 
 .mobiel-menu-open { 
@@ -111,7 +112,7 @@ body {
     max-width: 1500px;
 }
 
-.mobile-menu li { 
+.mobile-menu .nav-link { 
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -305,7 +306,10 @@ h1:hover {
     display: flex; 
 }
 
-.project-card button { 
+.project-card a { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     width: 50%;
     height: 3rem;
@@ -318,11 +322,109 @@ h1:hover {
     outline: none;
     font-weight: 600;
     border-radius: 8px;
+    text-decoration: none;
 }
 
-.project-card button:hover { 
+.project-card a:hover { 
+    transition: 0.5s ease-in-out;
     transform: scale(0.98);
     color: black;
     background-color: white;
 }
 
+.project { 
+    opacity: 0; 
+    transition: 1s ease-in-out;
+}
+
+.project.active { 
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+.arrow { 
+    margin: 10rem;
+}
+
+.arrow:hover { 
+    color: var(--bg-clr4);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+/* contactform */
+
+.contact-form { 
+    width: 500px;
+    max-width: 500px;
+}
+
+.contact-form button { 
+    width: 100%;
+    height: 40px;
+    background-color: black;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    margin-top: 10px;
+}
+
+.contact-form button:hover { 
+    background-color: var(--bg-clr4);
+    color: black; 
+    cursor: pointer;
+}
+
+.contact-name-field, .contact-message-field, .contact-email-field { 
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label { 
+    font-size: 1.2rem;
+    padding: 5px;
+    color: white;
+    font-weight: 600;
+}
+
+.contact-form input { 
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.contact-form textarea { 
+    padding: 15px;
+    height: 150px;
+    margin-bottom: 10px;
+    max-width:100%;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus { 
+    border: 2px solid var(--bg-clr4);
+    outline: none;
+}
+
+.failed, .succes { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.failed { 
+    background-color: rgb(195, 86, 86);
+    color: black; 
+}
+.succes { 
+    background-color: rgb(92, 165, 92); 
+    color: white; 
+}

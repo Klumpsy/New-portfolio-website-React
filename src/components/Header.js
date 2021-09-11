@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import NavItem from "./NavItem";
 
 
+
 const Header = ({width}) => { 
 
     const [openMobile, setOpenMobile] = useState(false)
@@ -17,24 +18,24 @@ const Header = ({width}) => {
 
                 {!openMobile ? 
                 <ul className = "mobile-menu mobile-menu-close">
-                    <NavItem text="Over"/>
-                    <NavItem text="Projecten"/>
-                    <NavItem text="Contact"/>
+                    <NavItem text="Over" pageId='about'/>
+                    <NavItem text="Projecten" pageId='projects'/>
+                    <NavItem text="Contact" pageId='contact'/>
                 </ul>
                 :
                 <ul className = "mobile-menu mobile-menu-open">
-                <NavItem text="Over"/>
-                <NavItem text="Projecten"/>
-                <NavItem text="Contact"/>
+                <NavItem text="Over" pageId='about'/>
+                <NavItem text="Projecten" pageId='projects'/>
+                <NavItem text="Contact" pageId='contact'/>
                 </ul>
                 }
             </nav>
             :
             <nav>
                 <ul className = "header-menu">
-                    <NavItem text="Over"/>
-                    <NavItem text="Projecten"/>
-                    <NavItem text="Contact"/>
+                    <NavItem text="About" pageId='about'/>
+                    <NavItem text="Projects" pageId='projects'/>
+                    <NavItem text="Contact" pageId='contact'/>
                 </ul>
             </nav>}
         </div>

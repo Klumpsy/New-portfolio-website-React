@@ -1,7 +1,7 @@
-import Button from "./Button"
+import Button from "./Button";
 import { motion, useMotionValue, useTransform } from "framer-motion"
 
-const ProjectCard = ({name, description, image}) => { 
+const ProjectCard = ({name, description, image, gitLink, liveLink}) => { 
     const x = useMotionValue(0); 
     const y = useMotionValue(0); 
     const rotateX = useTransform(y, [-100, 100], [30, -30]);
@@ -22,8 +22,8 @@ const ProjectCard = ({name, description, image}) => {
             <div className = "project-links">
                 <p>{description}</p>
                 <div className="project-button-container">
-                    <Button text="Check live"/>
-                    <Button text="Check code"/>
+                    <a href= {liveLink} target = "_blank" >Check Live</a>
+                    <a href={gitLink} target = "_blank" >Check Code</a>
                 </div>
             </div>
         </motion.div>
