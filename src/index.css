@@ -144,12 +144,12 @@ body {
 
 .projects-container { 
     background: rgb(31,40,51);
-    background: linear-gradient(10deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
+    background: linear-gradient(0deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
 }
 
 .contact-container { 
     background: rgb(31,40,51);
-    background: linear-gradient(310deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
+    background: linear-gradient(330deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
 }
 
 .about-container { 
