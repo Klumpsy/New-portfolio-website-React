@@ -60,10 +60,9 @@ body {
     list-style: none;
 }
 
-.nav-link { 
+.header-menu li { 
     margin: 20px;
     font-weight: 600;
-    color: white;
 }
 
 .nav-item { 
@@ -71,21 +70,21 @@ body {
     color: var(--bg-clr3);
 }
 
-.header-menu .nav-link:hover,
-.mobile-menu .nav-link:hover { 
+.header-menu li:hover,
+.mobile-menu li:hover { 
     transform: translateX(-5px);
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
 
-.header-menu .nav-link:hover,
-.mobile-menu .nav-link:hover  { 
+.header-menu li a:hover,
+.mobile-menu li a:hover  { 
     color: var(--bg-clr4);
 }
 
 
 .mobile-menu-close { 
-    transform: translateY(-300px);
+    transform: translateY(-250px);
 }
 
 .mobiel-menu-open { 
@@ -112,7 +111,7 @@ body {
     max-width: 1500px;
 }
 
-.mobile-menu .nav-link { 
+.mobile-menu li { 
     margin-top: 10px;
     margin-left: 10px;
 }
@@ -393,7 +392,6 @@ h1:hover {
 .contact-form input { 
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 5px;
 }
 
 .contact-form textarea { 
@@ -401,7 +399,7 @@ h1:hover {
     height: 150px;
     margin-bottom: 10px;
     max-width:100%;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 input:focus, textarea:focus { 
