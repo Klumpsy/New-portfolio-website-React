@@ -5,7 +5,7 @@ import profilepicture from "../images/picture.jpg"
 import { useInView } from "react-intersection-observer";
 
 
-const About = () => { 
+const Home = ({width}) => { 
 
     const {ref, inView} = useInView();
     const TextAnimation = useAnimation();
@@ -13,6 +13,22 @@ const About = () => {
 
     useEffect(() => { 
         inView ?  
+            width < 500 ?
+            TextAnimation.start({
+                x:0,
+                transition: { 
+                    type: 'spring', duration: 1, bounce: 0.2
+                }
+            }) &&
+            ImageAnimation.start({
+                x: 0,
+                opacity: 1,
+
+                transition: {
+                    duration: 1
+                }
+            }) 
+            :
             TextAnimation.start({
                 x:0,
                 transition: { 
@@ -27,17 +43,17 @@ const About = () => {
                     type: "spring", stiffness: 80, damping: 6
                 }
             }) 
-        : 
+        :   
             TextAnimation.start({
                 x: -40
             }) &&
             ImageAnimation.start({
-                x: -360, opacity: 0.1,
+                x: -40, opacity: 0.1,
             })
     },[inView])
         
     return (
-        <div className = "about-container" id="home">
+        <div className = "about-container" id="Home">
              <div ref={ref} className = "about-info">
                  <motion.h1
                  animate = {TextAnimation}>
@@ -52,6 +68,6 @@ const About = () => {
     )
 };
 
-export default About
+export default Home
 
 

@@ -2,7 +2,7 @@ import Socials from "./Socials"
 
 const Over = () => { 
     return (
-        <div className="over-page" id='about'>
+        <div className="over-page" id='About'>
             <div className = "over-info">
                  <h1>About</h1>
                  <p>Ik ben Bart, 29 jaar en mijn focus en interesse <br/> 

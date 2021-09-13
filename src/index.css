@@ -12,21 +12,13 @@
 }
 
 body { 
-    
     font-family: sans-serif;
 }
-
 
 /*Header*/
 
 .App { 
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll; 
-}
-
-.over-page, .about-container, .projects-container, .contact-container{ 
-    scroll-snap-align: start;
 }
 
 .home-button { 
@@ -45,22 +37,30 @@ body {
 }
 
 .header-container { 
-    position: sticky;
+    display: flex;
+    justify-content: center;
+    position: fixed;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--bg-clr);
     z-index: 2;
 }
+
+.inner-nav-container { 
+    display: flex;
+    width: 100%;
+    max-width: 1550px;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 .header-menu { 
     display: flex;
     list-style: none;
 }
 
-.header-menu li { 
+.header-menu a { 
     margin: 20px;
     font-weight: 600;
 }
@@ -70,15 +70,15 @@ body {
     color: var(--bg-clr3);
 }
 
-.header-menu li:hover,
-.mobile-menu li:hover { 
+.header-menu a:hover,
+.mobile-menu a:hover { 
     transform: translateX(-5px);
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
 
-.header-menu li a:hover,
-.mobile-menu li a:hover  { 
+.header-menu  a:hover,
+.mobile-menu  a:hover  { 
     color: var(--bg-clr4);
 }
 
@@ -166,8 +166,9 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h1{ 
+h1 { 
     font-size: 8rem;
+    margin-top: 6rem;
     color: white;
     background: rgb(255,255,255);
     background: linear-gradient(276deg, rgba(255,255,255,1) 0%, rgba(54,124,123,1) 0%, rgba(101,249,238,1) 30%, rgba(102,252,241,0.9822303921568627) 38%, rgba(255,255,255,1) 47%);
@@ -180,6 +181,12 @@ h1{
 
 h1:hover { 
     background-position: -100%;
+}
+
+@media only screen and (max-width: 600px) { 
+    h1{ 
+        font-size: 4.5rem;
+    }
 }
 
 .about-picture { 
@@ -351,6 +358,34 @@ h1:hover {
     transition: .5s ease-in-out;
 }
 
+@media only screen and (max-width: 800px) { 
+    .arrow { 
+        margin: 5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    
+.project-card { 
+    width: 200px;
+    height: 400px;
+}
+
+.project-card a, 
+.project-links { 
+    font-size: 0.9rem;
+}
+
+.projects-container { 
+    position: relative;
+}
+
+.arrow { 
+    margin: 0.4rem;
+    color: var(--bg-clr4);
+}
+}
+
 /* contactform */
 
 .contact-form { 
@@ -425,4 +460,11 @@ input:focus, textarea:focus {
 .succes { 
     background-color: rgb(92, 165, 92); 
     color: white; 
+}
+
+@media only screen and (max-width: 600px) { 
+    .contact-form { 
+        width: 250px;
+        max-width: 250px;
+    }
 }

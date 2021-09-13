@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 const NavItem = ({text}) => { 
 
     return ( 
         <>
-        <li><a href="" className ="nav-item">{text}</a></li>
+        <Link to ={text} smooth ={true} className ="nav-item">{text}</Link>
         </>
     )
 }

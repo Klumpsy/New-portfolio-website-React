@@ -13,7 +13,7 @@ const projects =
              liveLink =""/>,
 <ProjectCard image = {cryptoHeroezBotImage} 
              name="CryptoHeroez Discord BOT" 
-             description = "I made a Discord bot to track contents of Cardano(ADA) wallet adresses. Users can give the bot commands with (!..) and see if their NFT's are real and the bot assigns them a role accordingly"
+             description = "Discord bot to track contents of Cardano wallet adresses. Start bot commands with (!..) and see if your NFT is real. Let the bot assigns you a role accordingly"
              gitLink = "https://github.com/Klumpsy/Crypto-Heroez-Bot"
              liveLink = "https://discord.gg/3AxddtFb"/>,
 <ProjectCard image = {klumpersWebsiteImage} 
@@ -24,7 +24,7 @@ const projects =
 ]
 
 
-const Projects = () => { 
+const Projects = ({width}) => { 
     const [currentImage, setCurrentImage] = useState(0);
     const length = projects.length
 
@@ -39,8 +39,9 @@ const Projects = () => {
     
     return ( 
         
-        <div className = "projects-container" id="projects"> 
-            <i className="arrow fa fas fa-arrow-circle-left fa-4x" onClick ={previousSlide}></i>
+        <div className = "projects-container" id="Projects"> 
+            <i className= {width < 600 ? "arrow arrow-left fa fas fa-arrow-circle-left fa-2x": 
+            "arrow arrow-left fa fas fa-arrow-circle-left fa-4x"} onClick ={previousSlide}></i>
            {
                projects.map((project, index) => { 
                    return (
@@ -50,7 +51,8 @@ const Projects = () => {
                    )
                })
            }
-            <i className="arrow fa fas fa-arrow-circle-right fa-4x" onClick = {nextSlide}></i>
+            <i className= {width < 600 ? "arrow arrow-right fa fas fa-arrow-circle-right fa-2x" : 
+            "arrow arrow-right fa fas fa-arrow-circle-right fa-4x"} onClick = {nextSlide}></i>
         </div>
     );
 };

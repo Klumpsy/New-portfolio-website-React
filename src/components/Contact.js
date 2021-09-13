@@ -69,7 +69,7 @@ const Contact = () => {
     };
 
     return (
-        <div className ="contact-container" id='contact'>
+        <div className ="contact-container" id='Contact'>
             <h1>Contact</h1>
             <div className = "contact-form">
             {message && <div className={message.class}>{message.text}</div>} 
