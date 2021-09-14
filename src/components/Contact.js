@@ -1,16 +1,37 @@
-import React, { FormEvent, useState, useRef} from "react";
+import React, { FormEvent, useState, useRef, useEffect} from "react";
+import {motion, useAnimation} from 'framer-motion'; 
+import { useInView } from "react-intersection-observer";
 import axios from "axios";
 import ReCAPTCHA from 'react-google-recaptcha';
 
-
 const Contact = () => { 
 
+//Animation with framer-motion
+    const {ref, inView} = useInView();
+    const TextAnimation = useAnimation();
+
+    useEffect(() => { 
+        inView ?  
+            TextAnimation.start({
+                x:0,
+                transition: { 
+                    type: 'spring', duration: 1, bounce: 0.2
+                }
+            }) 
+        :   
+            TextAnimation.start({
+                x: 40
+            }) 
+          
+    },[inView])
+
+//Form submisson
     const formId = "dJpkkN51"
     const formSparkUrl = `https://submit-form.com/${formId}`
     const recaptchaKey = '6LfNhF0cAAAAADAGEqRXZANeLU-lVd1YHoIr-9ql';
     const recaptchaRef = useRef(); 
 
-    //State
+//Empty form state
     const initialFormState = { 
         email: "",
         name: "",
@@ -70,41 +91,41 @@ const Contact = () => {
 
     return (
         <div className ="contact-container" id='Contact'>
-            <h1>Contact</h1>
+            <motion.h1 ref={ref} animate ={TextAnimation}>Contact</motion.h1>
             <div className = "contact-form">
             {message && <div className={message.class}>{message.text}</div>} 
-            <form  onSubmit={submitForm}>
-                <div className = "contact-name-field">
-                    <label>Name</label>
-                    <input type = 'text' 
-                           id='name' 
-                           value={formState.name}
-                           onChange={updateFormControl}>
-                           </input>
-                </div>
-                <div className = "contact-email-field">
-                    <label>E-mail</label>
-                    <input type='email' 
-                           id='email' 
-                           value={formState.email}
-                           onChange={updateFormControl}>
-                           </input>
-                </div>
-                <div className = "contact-message-field">
-                    <label>Message</label>
-                    <textarea
-                     id='message' 
-                     value={formState.message}
-                     onChange={updateFormControl}>
-                    </textarea>
-                </div>
-                <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey = {recaptchaKey}
-                onChange={updateRecaptchaToken}
-                />
-                <button disabled={submitting}>{submitting ? "Sending..." : "Send message"}</button>
-            </form>
+                <form  onSubmit={submitForm}>
+                    <div className = "contact-name-field">
+                        <label>Name</label>
+                        <input type = 'text' 
+                        id='name' 
+                        value={formState.name}
+                        onChange={updateFormControl}>
+                        </input>
+                    </div>
+                    <div className = "contact-email-field">
+                        <label>E-mail</label>
+                        <input type='email' 
+                        id='email' 
+                        value={formState.email}
+                        onChange={updateFormControl}>
+                        </input>
+                    </div>
+                    <div className = "contact-message-field">
+                        <label>Message</label>
+                        <textarea
+                        id='message' 
+                        value={formState.message}
+                        onChange={updateFormControl}>
+                        </textarea>
+                    </div>
+                    <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey = {recaptchaKey}
+                    onChange={updateRecaptchaToken}
+                    />
+                    <button disabled={submitting}>{submitting ? "Sending..." : "Send message"}</button>
+                </form>
             </div>
         </div>
     )

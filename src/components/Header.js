@@ -7,8 +7,8 @@ const Header = ({width}) => {
 
    
     return (
-        <div className="header-container">
-    <div class="inner-nav-container">
+    <div className="header-container">
+    
         <a className="home-button" href="/">BK</a>
         {width < 480 ?
         <nav className = "mobile-nav-container">
@@ -39,8 +39,8 @@ const Header = ({width}) => {
                 <NavItem text="Contact"/>
             </ul>
         </nav>}
+   
     </div>
-        </div>
     )
 }
 

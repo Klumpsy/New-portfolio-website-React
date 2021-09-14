@@ -38,20 +38,13 @@ body {
 
 .header-container { 
     display: flex;
-    justify-content: center;
     position: fixed;
+    justify-content: space-between;
+    align-items: center;
     top: 0;
     width: 100%;
     background-color: var(--bg-clr);
     z-index: 2;
-}
-
-.inner-nav-container { 
-    display: flex;
-    width: 100%;
-    max-width: 1550px;
-    justify-content: space-between;
-    align-items: center;
 }
 
 
@@ -104,7 +97,7 @@ body {
     list-style: none;
     font-weight: 600;
     margin-top: 10px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px;
     transition: 0.4s ease-in-out;
     z-index: 10;
@@ -114,6 +107,10 @@ body {
 .mobile-menu li { 
     margin-top: 10px;
     margin-left: 10px;
+}
+
+.mobile-menu a { 
+    margin-top: 20px; 
 }
 
 .hamburger-button { 
@@ -127,7 +124,7 @@ body {
 }
 
 /*containers */ 
-.over-page, .projects-container, .contact-container, .about-container {
+.about-page, .projects-container, .contact-container, .home-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,9 +134,9 @@ body {
     
 }
 
-.over-page { 
+.about-page { 
     background: rgb(31,40,51);
-    background: linear-gradient(125deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
+    background: linear-gradient(150deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
 }
 
 .projects-container { 
@@ -152,9 +149,9 @@ body {
     background: linear-gradient(330deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
 }
 
-.about-container { 
+.home-container { 
     background: rgb(31,40,51);
-    background: linear-gradient(55deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
+    background: linear-gradient(30deg, rgba(31,40,51,1) 9%, rgba(102,252,241,0.9822303921568627) 12%, rgba(72,161,160,1) 17%, rgba(31,40,51,1) 36%);
 }
 
 /* about-container */ 
@@ -183,12 +180,6 @@ h1:hover {
     background-position: -100%;
 }
 
-@media only screen and (max-width: 600px) { 
-    h1{ 
-        font-size: 4.5rem;
-    }
-}
-
 .about-picture { 
     top: 10%;
     right: 5%;
@@ -211,6 +202,21 @@ h1:hover {
     width: 50px;
     margin: 10px;
 }
+
+@media only screen and (max-width: 600px) { 
+    h1{ 
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+
+    .skill-img { 
+        width: 40px;
+        margin: 5px;
+    }
+
+    
+}
+
 
 
 /* over page */ 
@@ -427,6 +433,7 @@ h1:hover {
 .contact-form input { 
     padding: 15px;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .contact-form textarea { 
@@ -434,7 +441,7 @@ h1:hover {
     height: 150px;
     margin-bottom: 10px;
     max-width:100%;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 input:focus, textarea:focus { 
@@ -451,6 +458,7 @@ input:focus, textarea:focus {
     font-size: 1.2rem;
     border-radius: 5px;
     margin-bottom: 10px;
+    padding: 5px;
 }
 
 .failed { 
@@ -466,5 +474,38 @@ input:focus, textarea:focus {
     .contact-form { 
         width: 250px;
         max-width: 250px;
+        overflow-x: hidden;
+    }
+
+    form { 
+        max-width: 250px;
+    }
+
+    .contact-form input { 
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .failed, .succes { 
+        font-size: 1rem;
+    }
+
+    .contact-form textarea { 
+        height: 100px;
+    }
+
+    .contact-form label {
+        font-size: 0.9rem;
+    }
+
+    .contact-form button { 
+        margin-top: 0;
+    }
+
+   iframe { 
+        transform: scale(0.75);
+        -webkit-transform: scale(0.75);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
     }
 }
