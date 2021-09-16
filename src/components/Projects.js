@@ -6,14 +6,9 @@ import cryptoHeroezBotImage from '../images/cryptoHeroesBot.png'
 
 const projects = 
 [
-<ProjectCard image = {weatherAppImage} 
-             name="WeatherApp" 
-             description = "A weatherApp where I use the openWeather API with Animated weather icons"
-             gitLink = "https://github.com/Klumpsy/Weather-App---Open-Weather-API"
-             liveLink =""/>,
 <ProjectCard image = {cryptoHeroezBotImage} 
              name="CryptoHeroez Discord BOT" 
-             description = "Discord bot to track contents of Cardano wallet adresses. Start bot commands with (!..) and see if your NFT is real. Let the bot assigns you a role accordingly"
+             description = "This bot tracks contents of Cardano wallet addresses. Start bot commands with (!..) and see if your NFT is real and way more!"
              gitLink = "https://github.com/Klumpsy/Crypto-Heroez-Bot"
              liveLink = "https://discord.gg/3AxddtFb"/>,
 <ProjectCard image = {klumpersWebsiteImage} 

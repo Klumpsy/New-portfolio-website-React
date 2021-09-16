@@ -229,6 +229,8 @@ h1:hover {
 
 .over-info p { 
     color: white;
+    max-width: 400px;
+    padding: 20px;
 }
 
 .socials-container { 
