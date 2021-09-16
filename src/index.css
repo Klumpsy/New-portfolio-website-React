@@ -218,7 +218,7 @@ h1:hover {
     }    
 }
 
-@media screen and (orientation: landscape) { 
+@media screen and (max-width: 1100px) { 
     .about-page, .projects-container, .contact-container, .home-container {
         min-height: 900px;
     }
@@ -409,10 +409,14 @@ h1:hover {
     }
 }
 
-@media screen and (orientation: landscape) { 
+@media screen and (max-width: 1350px) { 
     .project-card { 
         width: 200px;
         height: 400px;
+    }
+
+    .project-card h2 { 
+        font-size: 1.2rem;
     }
 
     .project-card a, 
@@ -421,8 +425,14 @@ h1:hover {
     }
 
     .arrow { 
-    margin: 4rem;
+    margin: 3rem;
     }
+}
+
+@media screen and (max-width: 340px) { 
+    .arrow { 
+        margin: 1.2rem;
+        }
 }
 
 /* contactform */
@@ -543,7 +553,7 @@ input:focus, textarea:focus {
     }
 }
 
-@media screen and (orientation: landscape) { 
+@media screen and (max-width: 1000px) { 
     .contact-form { 
         width: 250px;
         max-width: 250px;
