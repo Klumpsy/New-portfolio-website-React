@@ -215,9 +215,23 @@ h1:hover {
     .skill-img { 
         width: 40px;
         margin: 5px;
+    }    
+}
+
+@media screen and (orientation: landscape) { 
+    .about-page, .projects-container, .contact-container, .home-container {
+        min-height: 900px;
     }
 
-    
+    h1{ 
+        font-size: 4rem;
+        margin-top: 4rem;
+    }
+
+    .skill-img { 
+        width: 40px;
+        margin: 5px;
+    }   
 }
 
 /* over page */ 
@@ -375,24 +389,40 @@ h1:hover {
 
 @media only screen and (max-width: 600px) { 
     
-.project-card { 
+    .project-card { 
     width: 200px;
     height: 400px;
-}
+    }
 
-.project-card a, 
-.project-links { 
+    .project-card a, 
+    .project-links { 
     font-size: 0.9rem;
-}
+    }
 
-.projects-container { 
+    .projects-container { 
     position: relative;
-}
+    }
 
-.arrow { 
+    .arrow { 
     margin: 1.2rem;
     color: var(--bg-clr4);
+    }
 }
+
+@media screen and (orientation: landscape) { 
+    .project-card { 
+        width: 200px;
+        height: 400px;
+    }
+
+    .project-card a, 
+    .project-links { 
+    font-size: 0.9rem;
+    }
+
+    .arrow { 
+    margin: 4rem;
+    }
 }
 
 /* contactform */
@@ -508,6 +538,26 @@ input:focus, textarea:focus {
    iframe { 
         transform: scale(0.75);
         -webkit-transform: scale(0.75);
+        transform-origin: 0 0;
+        -webkit-transform-origin: 0 0;
+    }
+}
+
+@media screen and (orientation: landscape) { 
+    .contact-form { 
+        width: 250px;
+        max-width: 250px;
+        overflow-x: hidden;
+    }
+
+    .contact-form input { 
+        padding: 2px;
+        margin-bottom: 5px;
+    }
+
+    iframe { 
+        transform: scale(0.65);
+        -webkit-transform: scale(0.65);
         transform-origin: 0 0;
         -webkit-transform-origin: 0 0;
     }

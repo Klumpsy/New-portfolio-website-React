@@ -10,7 +10,7 @@ const Header = ({width}) => {
     <div className="header-container">
     
         <a className="home-button" href="/">BK</a>
-        {width < 480 ?
+        {width < 780 ?
         <nav className = "mobile-nav-container">
             <button onClick={() => setOpenMobile(!openMobile)}
             className="hamburger-button"><i className={openMobile ? "fa fas fa-times fa-lg" : "fa fas fa-bars fa-lg"}></i></button>
