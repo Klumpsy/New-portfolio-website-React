@@ -31,8 +31,15 @@ const About = () => {
                  <motion.h1 animate={TextAnimation}>About</motion.h1>
                  <p>Ik ben Bart, 29 jaar en mijn focus en interesse <br/> 
                     liggen voornamelijk bij het ontwikkelen <br/> 
-                    van frontend apps met Javascript en <br/> 
-                    sinds kort voornamelijk met React. 
+                    van frontend apps met Javascript. <br/> 
+                    Sinds kort ben ik voornamelijk met React bezig <br/>
+                    en lees ik zoveel mogelijk over UI/UX design en<br/>
+                    probeer ik me alle facetten van de MERN stack <br/>
+                    meester te maken!<br/>
+                    <br/>
+                    Gelukkig heb ik daar nog veel in te leren :) <br/>
+                    <br/>
+                    Kijk gerust op mijn LinkedIn en Github! 
                  </p>
                  <Socials/>
             </div> 

@@ -77,7 +77,7 @@ body {
 
 
 .mobile-menu-close { 
-    transform: translateY(-250px);
+    transform: translateY(-280px);
 }
 
 .mobiel-menu-open { 
@@ -98,7 +98,6 @@ body {
     font-weight: 600;
     margin-top: 10px;
     font-size: 20px;
-    padding: 20px;
     transition: 0.4s ease-in-out;
     z-index: 10;
     max-width: 1500px;
@@ -111,12 +110,16 @@ body {
 
 .mobile-menu a { 
     margin-top: 20px; 
+    margin-bottom: 10px; 
 }
 
 .hamburger-button { 
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin-right: 10px;
+    border: none;
+    background-color: var(--bg-clr4);
+
 }
 
 .hamburger-button:hover { 
@@ -216,8 +219,6 @@ h1:hover {
 
     
 }
-
-
 
 /* over page */ 
 
@@ -387,7 +388,7 @@ h1:hover {
 }
 
 .arrow { 
-    margin: 0.4rem;
+    margin: 1.2rem;
     color: var(--bg-clr4);
 }
 }
