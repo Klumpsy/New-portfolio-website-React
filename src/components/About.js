@@ -30,16 +30,13 @@ const About = () => {
             <div className = "over-info" ref ={ref}>
                  <motion.h1 animate={TextAnimation}>About</motion.h1>
                  <p>Hi there! I'm Bart, 29 years old and I love to
-                     create clean and solid frond-end projects with
+                     create clean and solid front-end projects with
                      JavaScript! 
                     <br/>
                     <br/>
-                    At this point in time I'm working alot with React, 
-                    also I'm reading about UI/UX design and I try to master
+                    At this point in time I'm working a lot with React. 
+                    Also I'm reading about UI/UX design and I try to master
                     all aspects of the MERN stack. 
-                    <br/>
-                    <br/> 
-                    Luckily I still have a lot to learn :) 
                     <br/>
                     <br/>
                     Feel free to check my Github and LinkedIn or contact

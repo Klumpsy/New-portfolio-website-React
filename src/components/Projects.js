@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import ProjectCard from './ProjectCard'
-import weatherAppImage from '../images/WeatherApp.png'
+
 import klumpersWebsiteImage from '../images/akkerbouwbedrijfklumpers.jpg'
 import cryptoHeroezBotImage from '../images/cryptoHeroesBot.png'
+import weatherappImage from '../images/project-weatherapp-react.jpg'
 
 const projects = 
 [
@@ -15,7 +16,13 @@ const projects =
              name="Akkerbouwbedrijf Klumpers Website" 
              description = "A website I made for our family farm, you can find all the crops we farm and more!"
              gitLink = "https://github.com/Klumpsy/Website-Akkerbouwbedrijf-Klumpers"
-             liveLink ="http://www.akkerbouwbedrijfklumpers.nl"/>
+             liveLink ="http://www.akkerbouwbedrijfklumpers.nl"/>,
+<ProjectCard image = {weatherappImage} 
+             name="React WeatherApp" 
+             description = "A weatherApp made with react and the openweather API. Search for any city or village you want and check the weather!"
+             gitLink = "https://github.com/Klumpsy/react-weatherApp"
+             liveLink ="https://klumpsy.github.io/react-weatherApp/"/>
+             
 ]
 
 
