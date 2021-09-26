@@ -385,6 +385,17 @@ h1:hover {
     .arrow { 
         margin: 5rem;
     }
+
+    .socials-git { 
+        color: chocolate;
+       
+    }
+    
+    .socials-linkedin { 
+        color: steelblue;
+        
+    }
+    
 }
 
 @media only screen and (max-width: 600px) { 
