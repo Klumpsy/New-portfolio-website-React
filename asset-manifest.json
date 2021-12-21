@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.08f3778d.chunk.css",
-    "main.js": "/static/js/main.2a444085.chunk.js",
-    "main.js.map": "/static/js/main.2a444085.chunk.js.map",
+    "main.js": "/static/js/main.b997ea66.chunk.js",
+    "main.js.map": "/static/js/main.b997ea66.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.64a8f8c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.64a8f8c6.js.map",
     "static/css/2.f78674c2.chunk.css": "/static/css/2.f78674c2.chunk.css",
@@ -15,6 +15,8 @@
     "static/media/Bootstrap-01.e65c9545.png": "/static/media/Bootstrap-01.e65c9545.png",
     "static/media/React-01.5efd23ae.png": "/static/media/React-01.5efd23ae.png",
     "static/media/akkerbouwbedrijfklumpers.ba0229c2.jpg": "/static/media/akkerbouwbedrijfklumpers.ba0229c2.jpg",
+    "static/media/chatApp.336db4e0.jpg": "/static/media/chatApp.336db4e0.jpg",
+    "static/media/firebase.c02f8d50.png": "/static/media/firebase.c02f8d50.png",
     "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.f691f37e.woff",
     "static/media/picture.f140a9d5.jpg": "/static/media/picture.f140a9d5.jpg",
     "static/media/project-weatherapp-react.b61dab31.jpg": "/static/media/project-weatherapp-react.b61dab31.jpg"
@@ -24,6 +26,6 @@
     "static/css/2.f78674c2.chunk.css",
     "static/js/2.265f3e91.chunk.js",
     "static/css/main.08f3778d.chunk.css",
-    "static/js/main.2a444085.chunk.js"
+    "static/js/main.b997ea66.chunk.js"
   ]
 }
