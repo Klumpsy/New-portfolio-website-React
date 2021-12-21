@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard'
 import klumpersWebsiteImage from '../images/akkerbouwbedrijfklumpers.jpg'
 import cryptoHeroezBotImage from '../images/cryptoHeroesBot.png'
 import weatherappImage from '../images/project-weatherapp-react.jpg'
+import chatappImage from "../images/chatApp.jpg"
 
 const projects = 
 [
@@ -21,8 +22,12 @@ const projects =
              name="React WeatherApp" 
              description = "A weatherApp made with react and the openweather API. Search for any city or village you want and check the weather!"
              gitLink = "https://github.com/Klumpsy/react-weatherApp"
-             liveLink ="https://klumpsy.github.io/react-weatherApp/"/>
-             
+             liveLink ="https://klumpsy.github.io/react-weatherApp/"/>,
+<ProjectCard image = {chatappImage} 
+             name="React Real-time Chat" 
+             description = "A chat app I created with React, Chat Engine API and Firebase. You can login with Facebook and Google"
+             gitLink = "https://github.com/Klumpsy/REACT-chat-app"
+             liveLink ="https://klumpsychat.netlify.app/"/>               
 ]
 
 

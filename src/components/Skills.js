@@ -8,9 +8,11 @@ import react from "../images/React-01.png";
 import nodeJs from "../images/Node-JS-02.png"; 
 import mongoDb from "../images/Mongodb-02.png"; 
 import git from "../images/Git-06.png"; 
+import firebase from "..//images/firebase.png"
+
 import { motion } from "framer-motion";
 
-const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git];
+const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git, firebase];
 
 
 const Skills = () => { 
