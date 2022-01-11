@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick"; 
 import bootstrap from "../images/Bootstrap-01.png"; 
+import sass from "../images/sass.png"; 
 import html from "../images/HTML-5-01.png"; 
 import css from "../images/CSS-3-01.png"; 
 import javaScript from "../images/JavaScript-01.png"; 
@@ -12,7 +13,7 @@ import firebase from "..//images/firebase.png"
 
 import { motion } from "framer-motion";
 
-const images = [bootstrap, html, css, javaScript, react, nodeJs, mongoDb, git, firebase];
+const images = [html, css, javaScript, react, nodeJs, git, firebase, sass];
 
 
 const Skills = () => { 
